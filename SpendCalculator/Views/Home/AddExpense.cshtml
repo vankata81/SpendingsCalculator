@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Spendings";
+}
+
+@model SpendCalculator.Models.Expense
+<div class="text-center">
+    <h1 class="display-4">Your Spendings</h1>
+</div>
+
+
+<form class="form-control" asp-action="AddExpenseForm">
+    <input hidden class="form-control mb-4" asp-for="Id"  />
+
+    <label>Value</label>
+    <input class="form-control mb-4" type="number" asp-for="Number" step="0.01"/>
+
+    <label>Expense</label>
+    <input class="form-control mb-4" type="text" asp-for="ExpenseName"/>
+
+    <button type="submit" class="btn btn-primary">submit</button>
+</form>
